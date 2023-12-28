@@ -6,9 +6,10 @@
     <title>SEO Title Generator</title>
 </head>
 <body>
-    <h1>SEO Title Generator</h1>
-    <label for="keyword">Enter Keyword:</label>
-    <input type="text" id="keyword" placeholder="Enter your keyword">
+    <h1>جرب يا كوتش</h1>
+    <h1>استخراج 5 عناوين متوافقين مع محركات البحث</h1>
+    <label for="keyword">برجاء ادخال الكلمة المفتاحية لاستخراج عناوين لها</label>
+    <input type="text" id="keyword" placeholder="اكتب هنا">
     <button onclick="generateTitles()">Generate Titles</button>
     <div id="output"></div>
 
@@ -21,7 +22,7 @@
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer YOUR_OPENAI_API_KEY', // Replace with your actual API key
+                    'Authorization': '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', // Replace with your actual API key
                 },
                 body: JSON.stringify({
                     prompt: `Generate SEO title ideas for the keyword: ${keyword}. [topic]`,
