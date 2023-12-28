@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <h1>جرب يا كوتش</h1>
     <h1>استخراج 5 عناوين متوافقين مع محركات البحث</h1>
     <label for="keyword">برجاء ادخال الكلمة المفتاحية لاستخراج عناوين لها</label>
-    <input type="text" id="keyword" placeholder="اكتب هنا">
+    <input type="text" id="keyword" placeholder="Enter your keyword">
     <button onclick="generateTitles()">Generate Titles</button>
     <div id="output"></div>
 
@@ -18,11 +18,11 @@
             const keyword = document.getElementById('keyword').value;
 
             // Make a request to the ChatGPT API
-            fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+            fetch('https://api.openai.com/v1/engines/gpt-3.5-turbo/completions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': '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', // Replace with your actual API key
+                    'Authorization': 'Bearer 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', // Replace with your actual API key
                 },
                 body: JSON.stringify({
                     prompt: `Generate SEO title ideas for the keyword: ${keyword}. [topic]`,
@@ -40,4 +40,3 @@
     </script>
 </body>
 </html>
-
